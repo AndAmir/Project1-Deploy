@@ -18,6 +18,7 @@ auth_response = requests.post(AUTH_URL, {
 
 #get the access token from json
 auth_response_data = auth_response.json()
+print(auth_response_data)
 # save the access token
 access_token = auth_response_data['access_token']
 
@@ -45,4 +46,3 @@ def getTopTracks(artist_ID):
         })
         
     return top_tracks
-
